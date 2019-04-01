@@ -91,3 +91,39 @@
     setName()
     Student.setName()
     Dog.setName()
+    
+# 异常处理
+- 广义上的错误分为错误和异常
+- 错误 可以人为避免
+- 异常 在语法逻辑正确的前提下，出现的问题
+- 在python中 异常是一个类 可以处理和使用
+- 异常分类
+    - 系统给定的异常 05.py
+        FloatingPointError
+        IndexError
+        KeyboardInterrupt
+        NameError
+        SyntaxError
+        OverflowError
+        TypeError
+        ZeroDivisionError
+- 异常处理模块 除except外else finally可选
+    - try:
+        尝试某个操作
+      except 异常1
+        解决方案1
+      except 异常2
+        解决方案2
+      else:
+        没有异常执行
+      finally:
+        有没有异常都要执行
+- 用户手动引发异常
+    - 用户自己引发一个异常
+    - raise关键词 raise 异常类
+    - raise 自定义异常
+- 自定义异常
+    - 自定义发生异常的代码
+    - 发生异常后的提示
+    - 发生异常的行数
+
