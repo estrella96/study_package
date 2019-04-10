@@ -188,3 +188,64 @@
     - fromtimestamp
 # timeit-时间测量工具
 - 测量程序运行时间间隔
+
+#  os-操作系统相关 07.py
+- 主要是文件操作
+- 三个模块
+    - os 操作系统目录相关
+    - os.path 系统路径相关
+    - shutl 高级文件操作 目录树的操作，文件复制删除移动
+- 路径
+    - 绝对路径 根目录开始
+    - 相对路径 当前环境开始
+## os模块
+- 方法
+    - getcwd() 获取当前的工作目录 返回工作目录的字符串
+    - chdir(path) 改变当前工作目录
+    - listdir(path) 获取一个目录中所有子目录和文件的名称
+    - makedirs(递归路径) 递归创建文件夹
+    - system(系统命令) 运行系统shell命令 打开shell或终端
+    - getenv('环境变量名') 获取指定的系统环境变量值
+    - putenv
+    - exit() 退出当前程序
+- 属性
+    - curdir 当前目录
+    - pardir 父亲目录
+    - sep 当前系统的路径分隔符
+    - linesep 当前系统的换行符
+    - name 系统名称
+## os.path
+- 方法
+    - abspath('路径') 将路径转化为绝对路径
+    - basename(路径) 获取路径中的文件名部分
+    - join(路径1，路径2...)将多个路径拼成一个路径
+    - split(路径) 路径切割为文件夹部分和当前文件部分
+    - isdir(路径) 检查是否是目录
+    - exists(路径) 检测文件是否存在或路径
+## shutil模块
+- 方法
+    - copy(来源路径，目标路径) 复制文件 返回目标了路径
+    - copy2() 复制文件 保留元数据（文件信息）
+    - copyfile(源路径，目标路径) 把文件中内容复制到另一个文件中
+    - move(源路径，目标路径) 移动文件/文件夹
+# 归档和压缩
+- 归档 把多个文件或者文件夹合并到一个文件中
+- 压缩 多个文件或文件夹无损或有损合并到一个
+- 方法
+    - make_archive("归档之后的目录和文件"，"后缀"，"需要归档的文件") 归档操作
+    - unpack_archive("归档文件地址"，"解包之后的地址")
+# zip-压缩包
+- 模块 zipfile
+- ZipFile(file[,mode[,compression[,allowZip64]]]) 创建一个ZipFile文件
+- ZipFile.getinfo(name) 获取zip文档中指定文件的信息
+- ZipFile.namelist() zip中所有文件的名称列表
+- ZipFile.extractall([path[,member[,pwd]]])
+
+# random
+- 随机数
+- 所有的随机模块都是伪随机
+- 方法
+    - random()获取0-1之间的随机小数
+    - choice(list)随机返回序列中的某一个值
+    - shuffle(list) 随机打乱列表
+    - randint(a,b) a-b之间随机整数 包含a和b
